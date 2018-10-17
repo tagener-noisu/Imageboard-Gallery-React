@@ -13,5 +13,6 @@ module.exports = {
 		rules: [
 			{test: /\.js?$/, include: SRC, use: 'babel-loader' }
 		]
-	}
+	},
+	mode: 'development'
 };

@@ -1,12 +1,6 @@
 import React from "react";
-
-function GalleryView(props) {
-	return <div id="gallery-view"></div>;
-}
-
-function GalleryFooter(props) {
-	return <div id="gallery-footer"></div>;
-}
+import View from "./View"
+import Footer from "./Footer"
 
 export default class Gallery extends React.Component {
 	constructor(props) {
@@ -29,8 +23,8 @@ export default class Gallery extends React.Component {
 	render() {
 		console.log("Gallery", this.state);
 		return <div id="gallery">
-			<GalleryView item={this.state.current_item} />
-			<GalleryFooter images={this.state.images} />
+			<View item={this.state.current_item} />
+			<Footer images={this.state.images} />
 		</div>;
 	}
 }

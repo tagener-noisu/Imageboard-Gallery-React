@@ -6,6 +6,7 @@ export default class Gallery extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {images: [], current_item: undefined};
+		this.updateCurrent = this.updateCurrent.bind(this);
 	}
 
 	componentDidMount() {
@@ -15,16 +16,19 @@ export default class Gallery extends React.Component {
 
 		let current_item = undefined;
 		if (images.length > 0)
-			current_item = images[0];
+			current_item = images[0].url;
 
 		this.setState({images, current_item});
 	}
 
+	updateCurrent(current_item) {
+		this.setState({current_item});
+	}
+
 	render() {
-		console.log("Gallery", this.state);
 		return <div id="gallery">
-			<View item={this.state.current_item} />
-			<Footer images={this.state.images} />
+			<View url={this.state.current_item} />
+			<Footer images={this.state.images} updateCurrent={this.updateCurrent} />
 		</div>;
 	}
 }

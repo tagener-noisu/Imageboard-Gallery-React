@@ -11,6 +11,9 @@
 
 #gallery-view {
 	flex: 1;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #gallery-footer {

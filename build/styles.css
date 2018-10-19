@@ -15,6 +15,13 @@
 	background-repeat: no-repeat;
 }
 
+#gallery-view video {
+	height: 100%;
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
 #gallery-footer {
 	flex: 0 0 150px;
 	box-shadow: 0 0 7px #111;
